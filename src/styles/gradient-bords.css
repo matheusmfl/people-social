@@ -1,7 +1,7 @@
 .border-animated {
   border: 1px solid transparent;
   border-radius: 20px; 
-  padding: 2px; 
+  
   background: linear-gradient(#181617, #181617) padding-box, 
   linear-gradient(
     var(--angle),

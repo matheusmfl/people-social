@@ -1,11 +1,63 @@
-import Image from 'next/image'
+'use client'
+import Image, { StaticImageData } from 'next/image'
 import { Container } from './Container'
 import robustSystem from '../../public/robust-system.webp'
 import '../styles/gradient-bords.css'
+import strategyIcon from '../../public/strategyIcon.svg'
+import comunityIcon from '../../public/comunityIcon.svg'
+
+interface CardsProps {
+  icon: StaticImageData
+  title: string
+  description: string
+}
+const Cards = ({ description, icon, title }: CardsProps) => {
+  return (
+    <div className="h-[376px] flex flex-col items-center justify-center px-5 gap-5 border-animated">
+      {/* img div */}
+      <div className="w-full flex justify-center h-fit">
+        <Image src={icon} alt="icon" />
+      </div>
+      {/* title div */}
+      <div className="px-5 ">
+        <h2 className="text-[20px] text-white text-center font-extrabold leading-[26px] tracking-[0.4px]">
+          {title}
+        </h2>
+      </div>
+
+      {/* description div */}
+      <span className="font-light text-center leading-[25px] text-white tracking-[0.28px]">
+        {description}
+      </span>
+    </div>
+  )
+}
 
 export function AboutUs() {
+  // const ref = useRef(null)
+  // const isInView = useInView(ref)
+  const cardsArray: CardsProps[] = [
+    {
+      title: 'Estratégia Personalizada',
+      description:
+        'As campanhas são desenvolvidas sob medida para atender às necessidades exclusivas da sua marca, garantindo autenticidade e relevância para o seu público-alvo.',
+      icon: strategyIcon,
+    },
+    {
+      title: 'Estratégia Personalizada',
+      description:
+        'Possuímos uma ampla rede de influencers em diferentes nichos e redes sociais, tornando mais fácil encontrar os parceiros ideais para promover sua marca.',
+      icon: comunityIcon,
+    },
+    {
+      title: 'Estratégia Personalizada',
+      description:
+        'As campanhas são desenvolvidas sob medida para atender às necessidades exclusivas da sua marca, garantindo autenticidade e relevância para o seu público-alvo.',
+      icon: strategyIcon,
+    },
+  ]
   return (
-    <section className="py-[88px] px-20 relative bg-black h-[800px] flex justify-center">
+    <section className="py-[88px] px-20 relative bg-black  flex justify-center">
       {/* Left SVG */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -109,9 +161,12 @@ export function AboutUs() {
           </linearGradient>
         </defs>
       </svg>
-      <Container className="flex justify-center">
+      <Container className="flex justify-center mx-auto flex-col gap-20">
         {/* Primeiro container com borda colorida */}
-        <div className="flex gap-[10px] h-[385px] bg-[#181617]/50 rounded-[20px] max-w-[1080px] relative z-10 border-animated">
+        <div
+          // ref={ref}
+          className="flex gap-[10px] h-[385px] mx-auto bg-[#181617]/50 rounded-[20px] max-w-[1080px] relative z-10 border-animated"
+        >
           {/* Primeira parte */}
           <div className="flex flex-col w-full items-center justify-center pl-6 flex-1">
             <h2 className="text-[38px] font-extrabold leading-[44px] text-white tracking-[0.76px]">
@@ -128,9 +183,24 @@ export function AboutUs() {
           </div>
 
           {/* Segunda parte */}
-          <div className="w-[587px] h-full rounded-tr-[20px] relative rounded-br-[20px]">
+
+          <div className="w-[587px] h-full rounded-tr-[20px] relative rounded-br-[20px] -translate-y-5 translate-x-2">
             <Image src={robustSystem} alt="Sistema robusto" />
           </div>
+        </div>
+
+        {/* Cards container */}
+        <div className="flex relative z-20 mx-auto max-w-[1080px] gap-10">
+          {cardsArray.map((card, index) => {
+            return (
+              <Cards
+                key={index}
+                icon={card.icon}
+                title={card.title}
+                description={card.description}
+              />
+            )
+          })}
         </div>
       </Container>
     </section>
