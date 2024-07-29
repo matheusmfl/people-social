@@ -8,6 +8,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.card-methodology {
+  box-shadow: -4px 8px 8px 4px #FC1B61;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

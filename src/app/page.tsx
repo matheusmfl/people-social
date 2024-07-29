@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Stats } from '@/components/Stats'
 import { AboutUs } from '@/components/AboutUs'
 import { MarkZuckembergSection } from '@/components/MarkZuckembergSection'
+import { Methodology } from '@/components/Methodology'
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <AboutUs />
 
       <MarkZuckembergSection />
+      <Methodology />
     </main>
   )
 }

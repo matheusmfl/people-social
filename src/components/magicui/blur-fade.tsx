@@ -30,6 +30,7 @@ export default function BlurFade({
   blur = '6px',
 }: BlurFadeProps) {
   const ref = useRef(null)
+  // @ts-expect-error-thisLine
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin })
   const isInView = !inView || inViewResult
   const defaultVariants: Variants = {
