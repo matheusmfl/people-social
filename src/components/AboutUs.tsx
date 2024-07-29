@@ -169,9 +169,11 @@ export function AboutUs() {
         >
           {/* Primeira parte */}
           <div className="flex flex-col w-full items-center justify-center pl-6 flex-1">
-            <h2 className="text-[38px] font-extrabold leading-[44px] text-white tracking-[0.76px]">
-              <span className="text-rosaPrimary">Plataforma Robusta</span> com
-              insights das campanhas
+            <h2 className="text-[38px] font-extrabold leading-[44px] z-40 text-white tracking-[0.76px]">
+              <span className="text-rosaPrimary z-[100]">
+                Plataforma Robusta
+              </span>{' '}
+              com insights das campanhas
             </h2>
 
             <span className="text-base tracking-[0.32px] font-light text-white">

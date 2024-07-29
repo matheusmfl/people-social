@@ -4,6 +4,7 @@ import asset from '../../public/assetHero.webp'
 import Image from 'next/image'
 import { Stats } from '@/components/Stats'
 import { AboutUs } from '@/components/AboutUs'
+import { MarkZuckembergSection } from '@/components/MarkZuckembergSection'
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
       </div>
 
       <AboutUs />
+
+      <MarkZuckembergSection />
     </main>
   )
 }

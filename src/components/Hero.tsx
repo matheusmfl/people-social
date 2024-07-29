@@ -1,8 +1,10 @@
+'use client'
 import Image from 'next/image'
 import { Container } from './Container'
 import heroImg from '../../public/Imagem-Hero.webp'
 
 import { Button } from './ui/button'
+import BlurFade from './magicui/blur-fade'
 
 export function Hero() {
   return (
@@ -117,9 +119,11 @@ export function Hero() {
           {/* Div com textos */}
           <div className="h-full flex flex-col max-w-[472px] relative z-40 justify-center gap-5">
             <h1 className="text-[58px] font-light text-white tracking-[1.16px] z-10 leading-[67px]">
-              <strong className="font-extrabold">
-                Marketing de Influência
-              </strong>{' '}
+              <BlurFade>
+                <strong className="font-extrabold">
+                  Marketing de Influência
+                </strong>{' '}
+              </BlurFade>
               baseado em dados
             </h1>
 
