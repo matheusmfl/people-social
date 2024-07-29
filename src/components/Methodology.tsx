@@ -3,6 +3,8 @@ import bg from '../../public/bgMethodology.webp'
 import { Container } from './Container'
 import ShineBorder from './magicui/shine-border'
 import { MethodologyCard, MethodologyCardProps } from './MethodologyCard'
+import { FeedbackCard } from './FeedbackCard'
+import avatar1 from '../../public/avatar1.jpeg'
 
 export function Methodology() {
   const cardsInfosArray: MethodologyCardProps[] = [
@@ -106,6 +108,41 @@ export function Methodology() {
         </ShineBorder>
 
         {/* Container feedbacks */}
+        <section className="flex flex-col gap-20 w-full">
+          <h2 className="text-[38px] font-bold leading-[49px] text-white text-center">
+            {' '}
+            O que nossos clientes falam da People!
+          </h2>
+
+          <div className="flex gap-5 items-center justify-center">
+            <FeedbackCard
+              companyName="Agência Curta - Eventos"
+              locale="Recife - pe"
+              userName="Emerson Gomes"
+              message="Toop de verdade meus amigos! Vocês estão presentes em todos os meus eventos pra dar aquela força crucial na divulgação. Sempre selecionando os melhores influenciadores de acordo com o propósito de cada evento!"
+              stars={5}
+              avatar={avatar1}
+            />
+
+            <FeedbackCard
+              companyName="Agência Curta - Eventos"
+              locale="Recife - pe"
+              userName="Emerson Gomes"
+              message="Toop de verdade meus amigos! Vocês estão presentes em todos os meus eventos pra dar aquela força crucial na divulgação. Sempre selecionando os melhores influenciadores de acordo com o propósito de cada evento!"
+              stars={5}
+              avatar={avatar1}
+            />
+
+            <FeedbackCard
+              companyName="Agência Curta - Eventos"
+              locale="Recife - pe"
+              userName="Emerson Gomes"
+              message="Toop de verdade meus amigos! Vocês estão presentes em todos os meus eventos pra dar aquela força crucial na divulgação. Sempre selecionando os melhores influenciadores de acordo com o propósito de cada evento!"
+              stars={5}
+              avatar={avatar1}
+            />
+          </div>
+        </section>
       </Container>
     </section>
   )
