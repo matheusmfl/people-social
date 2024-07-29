@@ -104,6 +104,8 @@ export function Methodology() {
             })}
           </div>
         </ShineBorder>
+
+        {/* Container feedbacks */}
       </Container>
     </section>
   )
